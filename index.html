@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>wow!</title>
+<link href="css/base.css"  rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="container">
+<iframe id="iframe_1" width=800 height=380 name=aa frameborder=0 scrolling=yes ></iframe>			<!-- 内嵌框架-->
+  <div class="header">
+    <div id="time"></div>
+  </div>
+  <div class="conentGroup">
+      <div class="back"><img src="images/arrow_left.png" title="返回" /></div>					<!--返回按钮--> 
+      <div class="weibo"><img src="icon/weibo.png" title="使用微博帐号登录" /></div>					
+    <div class="content">  		
+      <div class="card one"><a href=one.html target=aa><img src="icon/home.png" title="每日推荐"/></a></div>
+      <div class="card two"><a href="pic.html" target=aa><img src="icon/pic.png" title="Pic"/></a></div>
+      <div class="card three"><a href="music.html" target=aa><img src="icon/music.png" title="Music"/></a></div>
+      <div class="card four"><img src="icon/share.png" title="Share"/></div>
+      <div class="card one"><img src="icon/talking.png" title="Talking"/></div>
+      <div class="card one"><img src="icon/about.png" title="About"/></div>
+      <div class="clear"></div>
+    </div>
+    <div class="content2 skew">  </div>
+  </div>
+    
+ 
+</div>
+</body>
+</html>
+<script src="js/jquery-1.6.1.min.js"></script>
+<script>
+$(function(){  
+		  
+		   var card = $(".card");
+		   //Card——————————————————————————————————————————
+		  	                                     
+			
+//			$(".content").fadeOut(900,skew);	 				//card消失后多久执行skew函数即content2出现	,53行代码中，skew已被css控制隐藏
+//			function skew(){
+//   		  $(".content2").removeClass("skew");                 //content2为点击后文字css样式，skew为content2的整块行为
+//			}
+
+
+                            
+			
+		 $(".card").click(function(){		
+			$(".search").hide();	   						 
+			$(this).fadeTo(1000,0); 						 //点击哪个card，该card消失(1000为演变到0即透明)的时间
+			$(".content").fadeOut(600,skew);
+			
+			function skew(){
+			$("#iframe_1").removeClass("skew");
+			}
+			
+			var list = $(this).siblings(".card");
+			var i = 0;
+			(function cover() {
+				list.eq(i++).addClass("cover").fadeTo(90,0,cover);
+			})();
+			
+			
+		  })
+		  
+		  
+		  
+		   //Back——————————————————————————————————————————
+		  $(".back").click(function(){
+		   $(".search").hide();
+		   $("#iframe_1").addClass("skew");   //点击返回按钮iframe框架移走
+		   $(".content").fadeIn(100);         //点击返回card恢复速度
+
+			var j = 0;
+			(function cover() {
+				card.eq(j++).removeClass("cover").fadeTo(90,1,cover);
+			})();
+			
+			$(".content2 span").fadeTo(100,0);
+		  })
+		   
+		  //MultiTasking——————————————————————————————————————————
+//			$(".right").click(function(){
+//			$(".search").slideToggle(300);	   
+//		   })       /* 点击control右边(right)的search后框下拉出 */
+		 //----------------------------------------------------------
+		    /*
+			$(".left").click(function(){
+			$(".search").hide();	   						 
+			$(".content").fadeOut(900,skew);
+			
+			function skew(){
+			$(".content2").removeClass("skew");
+			}
+			
+			var list = $(".card");
+			var i = 0;
+			(function cover() {
+				list.eq(i++).addClass("cover").fadeTo(90,0,cover);
+			})();
+			
+			var text = "multiTasking";
+			$(".content2 span").html(text).fadeTo(900,1);
+		   })
+		      点击返回键后的行为，but并不能实现
+		    */
+		   
+		 
+})
+           startTime(); 
+		  //时钟——————————————————————————————————————————
+		  function startTime()
+		  {
+		  var today=new Date()
+		  var h=today.getHours()
+		  var m=today.getMinutes()
+		  var s=today.getSeconds()
+		  // add a zero in front of numbers<10
+		  m=checkTime(m)
+		  s=checkTime(s)
+		  
+		  document.getElementById("time").innerHTML=h+":"+m
+		  t=setTimeout('startTime()',500)
+		  }
+		  
+		  function checkTime(i)
+		  {
+		  if (i<10) 
+			{i="0" + i}
+			return i
+		  }
+
+</script>
