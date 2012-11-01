@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: -17px 5px;  /* 栏目定位 */
+}
+.title {
+	font-family:"Comic Sans MS", cursive;
+	font-size:25px;
+	color:#fe235e;
+	height:20px;
+}
+.menu_list {
+	width: 300px;  /* 栏目宽度 */
+}
+.menu_head {
+	height:50px;   /* 栏目高度 */
+	padding: 1px 1spx;
+	cursor: pointer;
+	position: relative;
+	margin:3px;  /* 栏目间间距 */
+	font-weight:bold;
+	border-radius:5px;
+	background:url(../images/music-head.png);
+}
+	
+.menu_body {
+	position:relative;
+	left:5px;
+	display:none;
+	border-radius:5px;
+	height:125px;  /* 下拉内容高度 */
+	width:520px;  /* 下拉内容宽度 */
+}
+.menu_body img {
+	position:relative;
+	left:-10px;
+}
+.menu_body a {
+	display:block;
+	color:#006699;
+	background-color:#EFEFEF;
+	padding-left:10px;
+	font-weight:bold;
+	text-decoration:none;
+
+}
+.menu_body a:hover {
+	color: #000000;
+	text-decoration:underline;
+}
+/* 栏目内文字设置 */
+.biaoti {
+	position:relative;
+	left:15px;
+	top:-15px;
+	font-family:"Comic Sans MS", cursive;
+	color:#6c6969;
+	font-size:19px;
+	text-align:center;
+}
+/* 栏目内正文设置 */
+.zhengwen {
+	font-size:13px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#4c4c4c;
+	position:relative;
+	top:-100px;
+	left:150px;
+}
+hr {
+	position:relative;
+	float:left;
+	left:-10px;
+	top:5px;
+    border-top:0px solid #4c4c4c;
+	width:2px; 
+	height:50px;
+}
+.down {
+	position:relative;
+	left:55px;
+	top:-12px;
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>jQuery Wookmark Plug-in Example</title>
+  <meta name="description" content="An very basic example of how to use the Wookmark jQuery plug-in.">
+  <meta name="author" content="Christoph Ono">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- Styling for your grid blocks -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+body {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:15px;
+}
+/* remove this */
+#navcontainer {
+	width:500px
+}
+#navlist {
+	margin: 0;
+	padding: 0 ;
+
+}
+#navlist ul, #navlist li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+#navlist a:link, #navlist a:visited {
+	float: left;
+	margin: 0 10px 4px 10px;
+}
+#navlist a:link #current, #navlist a:visited#current, #navlist a:hover {
+	border-bottom: 1px solid #ff8fab; /* 过文字底部色条 */
+	padding-bottom: 5px;
+}
+
+</style>
+</head>
+<body>
+<div id="navcontainer">
+  <ul id="navlist">
+    <li><a href="#" target="_self" id="current"><img src="images/1-2.png"/></a></li>
+    <li><a href="pic2.html" target="_self"><img src="images/2.png" onMouseOver="this.src='images/2-2.png'" onMouseOut="this.src='images/2.png'"/></a></li>
+    <li><a href="pic3.html"><img src="images/3.png" onMouseOver="this.src='images/3-2.png'" onMouseOut="this.src='images/3.png'"/></a></li>
+    <li><a href="pic4.html"><img src="images/4.png" onMouseOver="this.src='images/4-2.png'" onMouseOut="this.src='images/4.png'"/></a></li>
+    <li><a href="pic5.html"><img src="images/5.png" onMouseOver="this.src='images/5-2.png'" onMouseOut="this.src='images/5.png'"/></a></li>
+    <li><a href="pic6.html"><img src="images/6.png" onMouseOver="this.src='images/6-2.png'" onMouseOut="this.src='images/6.png'"/></a></li>
+  </ul>
+</div>
+  <div id="container">
+    <div id="main">
+      <ul id="tiles">
+        <!-- 初始显示图片数 -->
+        <li><a href="http://lazure.sinaapp.com/images/12715127084348(396x600).jpg" target="_blank"><img src="images/12715127084348(396x600)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/12715127084348(396x600).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/12715127084348(396x600).jpg"  title="396x600" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/12776838278440(500x500).jpg" target="_blank"><img src="images/12776838278440(500x500)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/12776838278440(500x500).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/12776838278440(500x500).jpg" title="500x500" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/12815285386899(500x324).jpg" target="_blank"><img src="images/12815285386899(500x324)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/12776838278440(500x500).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/12776838278440(500x500).jpg"  title="500x500" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/1140341451bbbb4763o(1000x663).jpg" target="_blank"><img src="images/1140341451bbbb4763o(1000x663)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/1140341451bbbb4763o(1000x663).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/1140341451bbbb4763o(1000x663).jpg.jpg"  title="1000x663" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/11406210371fbbec8bl(400x263).jpg" target="_blank"><img src="images/11406210371fbbec8bl(400x263)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/11406210371fbbec8bl(400x263).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/11406210371fbbec8bl(400x263).jpg"  title="400x263" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/11256521650ca9c102o(720x405).jpg" target="_blank"><img src="images/11256521650ca9c102o(720x405)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/11256521650ca9c102o(720x405).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/11256521650ca9c102o(720x405).jpg"  title="720x405" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/1002624508937e0b97(320x480).jpg" target="_blank"><img src="images/1002624508937e0b97(320x480)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/1002624508937e0b97(320x480).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/1002624508937e0b97(320x480).jpg"  title="320x480" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/11239206511e0bc3d8l(320x480).jpg" target="_blank"><img src="images/11239206511e0bc3d8l(320x480)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/11239206511e0bc3d8l(320x480).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/11239206511e0bc3d8l(320x480).jpg"  title="320x480" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/1139739215e080008bo(619x538).jpg" target="_blank"><img src="images/1139739215e080008bo(619x538)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/1139739215e080008bo(619x538).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/1139739215e080008bo(619x538).jpg"  title="619x538" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/1139743227ccc40b47l(510x509).jpg" target="_blank"><img src="images/1139743227ccc40b47l(510x509)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/1139743227ccc40b47l(510x509).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/1139743227ccc40b47l(510x509).jpg"  title="510x509" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/11366368637d9c68a3l(400x521).jpg" target="_blank"><img src="images/11366368637d9c68a3l(400x521)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/11366368637d9c68a3l(400x521).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/11366368637d9c68a3l(400x521).jpg"  title="400x521" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/11397498671d6647c9o(650x588).jpg" target="_blank"><img src="images/11397498671d6647c9o(650x588)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/11397498671d6647c9o(650x588).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/11397498671d6647c9o(650x588).jpg"  title="650x588" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/112859682599ae2808l(320x480).jpg" target="_blank"><img src="images/112859682599ae2808l(320x480)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/112859682599ae2808l(320x480).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/112859682599ae2808l(320x480).jpg"  title="320x480" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1dtk753ewh2(680x680).jpg" target="_blank"><img src="images/7f9e9b4dgw1dtk753ewh2(680x680)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1dtk753ewh2(680x680).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1dtk753ewh2(680x680).jpg"  title="680x680" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1dtl5tb4qe8j.jpg" target="_blank"><img src="images/7f9e9b4dgw1dtl5tb4qe8j_2.jpg" width="125" height="125"><p><a>大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/12715127084348(396x600).jpg"  title="396x600" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1dtr0ab265mj(440x552).jpg" target="_blank"><img src="images/7f9e9b4dgw1dtr0ab265mjc_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1dtr0ab265mj(440x552).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1dtr0ab265mj(440x552).jpg"  title="440x552" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1du9nseaa61j.jpg" target="_blank"><img src="images/7f9e9b4dgw1du9nseaa61j_2.jpg" width="125" height="125"><p><a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1du9nseaa61j.jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1du9nseaa61j.jpg"  title="440x293" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/1137688327da112b03l(500x332).jpg" target="_blank"><img src="images/1137688327da112b03l(500x332)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/1137688327da112b03l(500x332).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/1137688327da112b03l(500x332).jpg"  title="500x332" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/1131955539c74073e9l(510x719).jpg" target="_blank"><img src="images/1131955539c74073e9l(510x719)_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/1131955539c74073e9l(510x719).jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/1131955539c74073e9l(510x719).jpg"  title="510x719" target="_blank">右键另存为</a></p></li>
+        <li><a href="http://lazure.sinaapp.com/images/1135251953f18774f7o()640x426.jpg" target="_blank"><img src="images/1135251953f18774f7o()640x426_2.jpg" width="125" height="125"></a><p><a href="http://lazure.sinaapp.com/images/1135251953f18774f7o()640x426.jpg" target="_blank">大图</a>&nbsp;|&nbsp;<a href="http://lazure.sinaapp.com/images/1135251953f18774f7o()640x426.jpg"  title="640x426" target="_blank">右键另存为</a></p></li>
+
+        <!-- End First Pic Show  -->
+      </ul>
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+
+  <!-- include jQuery -->
+  <script src="js/jquery-1.6.1.min.js"></script>
+  <!-- Include the plug-in -->
+  <script src="js/jquery.wookmark.js"></script>
+  <!-- Once the page is loaded, initalize the plug-in. -->
+  <script type="text/javascript">
+    var handler = null;
+    
+    // Prepare layout布局 options.
+    var options = {
+      autoResize: true, // This will auto-update the layout when the browser window is resized.
+      container: $('#main'), // Optional, used for some extra CSS styling
+      offset: 5, // 图片间左右间隔
+      itemWidth: 125 //每张图片宽度
+    };
+    
+    /**
+     * When scrolled all the way to the bottom, add more tiles.
+     */
+    function onScroll(event) {
+      // Check if we're within 100 pixels of the bottom edge of the broser window.
+      var closeToBottom = ($(window).scrollTop() + $(window).height() > $(document).height() - 100);
+      if(closeToBottom) {
+        // Get the first then items from the grid, clone them, and add them to the bottom of the grid.
+        var items = $('#tiles li');
+        var firstTen = items.slice(0, 10);
+        $('#tiles').append(firstTen.clone());
+        
+        // Clear our previous layout handler.
+        if(handler) handler.wookmarkClear();
+        
+        // Create a new layout handler.
+        handler = $('#tiles li');
+        handler.wookmark(options);
+      }
+    };
+  
+    $(document).ready(new function() {
+      // Capture scroll event.
+      $(document).bind('scroll', onScroll);
+      
+      // Call the layout function.
+      handler = $('#tiles li');
+      handler.wookmark(options);
+    });
+  </script>
+  
+</body>
+</html>

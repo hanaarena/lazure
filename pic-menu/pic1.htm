@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style>
+body {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:15px;
+}
+#navcontainer {
+	width:500px
+}
+#navlist {
+	margin: 0;
+	padding: 0 ;
+
+}
+#navlist ul, #navlist li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+#navlist a:link, #navlist a:visited {
+	float: left;
+	margin: 0 10px 4px 10px;
+}
+#navlist a:link #current, #navlist a:visited#current, #navlist a:hover {
+	border-bottom: 1px solid #ff8fab; /* 过文字底部色条 */
+	padding-bottom: 5px;
+}
+
+</style>
+</head>
+<body>
+<div id="navcontainer">
+  <ul id="navlist">
+    <li><a href="#" target="" id="current"><img src="1-2.png"/></a></li>
+    <li><a href="baidu.com" target="_blank"><img src="2.png" onMouseOver="this.src='2-2.png'" onMouseOut="this.src='2.png'"/></a></li>
+    <li><a href="#"><img src="3.png" onMouseOver="this.src='3-2.png'" onMouseOut="this.src='3.png'"/></a></li>
+    <li><a href="#"><img src="4.png" onMouseOver="this.src='4-2.png'" onMouseOut="this.src='4.png'"/></a></li>
+    <li><a href="#"><img src="5.png" onMouseOver="this.src='5-2.png'" onMouseOut="this.src='5.png'"/></a></li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自定义滚动条</title>
+<script src="js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript">
+			$(document).ready(function(){
+
+				//Partial Sliding (Only show some of background)
+				//要更改上、下方向和左、右方向，只需要在top/left的值中添加"-"号（表示反方面）。
+				$('.boxgrid.peek').hover(function(){
+					$(".cover", this).stop().animate({left:'325px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:160});
+				});
+				// two
+					$('.boxgrid2.peek2').hover(function(){
+					$(".cover", this).stop().animate({top:'325px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
+				});
+			
+			});
+</script>
+<script type="text/javascript" src="js/one.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<style>
+.boxgrid{ 
+	width: 125px; 
+	height: 125px;
+	top:52px;
+	left:-35px; 
+	margin:3px; 
+	float:left; 
+	background:#161613; 
+	overflow: hidden; 
+	position: relative; 
+			}
+.boxgrid img { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+}
+
+.boxgrid2 {
+	position:relative;
+	width: 125px; 
+	height: 125px;
+	top:183px;
+	left:-428px;
+	margin:3px; 
+	float:left;
+	overflow:hidden; 
+}
+.boxgrid2 img { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+}
+
+</style>
+</head>
+<body>
+
+ <div id="box">
+	<div class="list">
+    	 <ul>
+         	<div class="piclogo"><a href="pic.html">图片</a><hr size="1" class="hr1" /></div>
+            <div class="boxgrid peek">
+				<a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1du9nseaa61j.jpg" target="_blank"><img src="images/7f9e9b4dgw1du9nseaa61j_2.jpg"/></a>
+				<a href="http://lazure.sinaapp.com/images/1001982446cd43c5ae(680x453)_2.jpg" target="_BLANK"><img class="cover" src="images/1001982446cd43c5ae(680x453)_2.jpg"/></a>
+			</div>
+            <div class="boxgrid peek">
+				<a href="http://lazure.sinaapp.com/images/7f9e9b4dgw1dtr0ab265mjc.jpg" target="_blank"><img src="images/7f9e9b4dgw1dtr0ab265mjc_2.jpg"/></a>
+				<a href="http://lazure.sinaapp.com/images/1004696248b014f8c8(640x960).jpg" target="_BLANK"><img class="cover" src="images/1004696248b014f8c8(640x960)_2.jpg"/></a>
+			</div>
+            <div class="boxgrid peek">
+				<a href="http://lazure.sinaapp.com/images/1127842854beaa3388o(600x900).jpg" target="_blank"><img src="images/1127842854beaa3388o(600x900)_2.jpg"/></a>
+				<a href="http://lazure.sinaapp.com/images/1127749831a84d2e69l(500x350).jpg" target="_BLANK"><img class="cover" src="images/1127749831a84d2e69l(500x350)_2.jpg"/></a>
+			</div>
+            <div class="boxgrid2 peek2">	
+                <a href="http://lazure.sinaapp.com/images/1131955539c74073e9l(510x719).jpg" target="_blank"><img src="images/1131955539c74073e9l(510x719)_2.jpg"/></a>
+				<a href="http://lazure.sinaapp.com/images/1135251953f18774f7o()640x426.jpg" target="_BLANK"><img class="cover" src="images/1135251953f18774f7o()640x426_2.jpg"/></a>
+			</div>
+            <div class="boxgrid2 peek2">	
+                <a href="http://lazure.sinaapp.com/images/11393946279f5034a6l(500x500).jpg" target="_blank"><img src="images/11393946279f5034a6l(500x500)_2.jpg"/></a>
+				<a href="http://lazure.sinaapp.com/images/1140163437b5b3d2bel(500x412).jpg" target="_BLANK"><img class="cover" src="images/1140163437b5b3d2bel(500x412)_2.jpg"/></a>
+			</div>
+            <div class="boxgrid2 peek2">	
+                <a href="http://lazure.sinaapp.com/images/113906860061f39f6el(500x736).jpg" target="_blank"><img src="images/113906860061f39f6el(500x736)_2.jpg"/></a>
+				<a href="http://lazure.sinaapp.com/images/11312110963786b3e8l(500x750).jpg" target="_BLANK"><img class="cover" src="images/11312110963786b3e8l(500x750)_2.jpg"/></a>
+			</div>
+           <!-- Music -->
+            <div class="musiclogo"><a href="music.html">音乐</a><hr size="1" class="hr2" /></div>
+            <li class="two"><a href="#"><img style="width:258px;" src="images/test.png" onmouseover="this.src='images/test2.png'" onmouseout="this.src='images/test.png'" /></a></li>
+            <li class="two"><a href="http://www.1ting.com/album_7072.html" target="_blank"><img style="width:258px; left:-165px;" src="images/0416.jpg" onmouseover="this.src='images/0416_2.jpg'" onmouseout="this.src='images/0416.jpg'" title="全碟试听" /></a></li>
+            <li class="two"><a href="http://www.1ting.com/album_58633.html" target="_blank"><img src="images/music4.jpg" onmouseover="this.src='images/music4_2.jpg'" onmouseout="this.src='images/music4.jpg'" title="全碟试听" /></a></li>
+            <li class="two"><a href="#"><img style="width:61px;height:61px; position:relative;top:120px; left:500px;"src="" /></a></li>
+            <li class="two2"><a href="http://www.1ting.com/album_58568.html" target="_blank"><img src="images/music5.jpg" onmouseover="this.src='images/music5_2.jpg'" onmouseout="this.src='images/music5.jpg'" /></a></li>
+            <li class="two2"><a href="http://www.1ting.com/album_58425.html" target="_blank"><img src="images/music8.jpg" onmouseover="this.src='images/music8_2.jpg'" onmouseout="this.src='images/music8.jpg'"  /></a></li>
+			<li class="two2"><a href="http://www.1ting.com/album_58868.html" target="_blank"><img  style="left:-32px;"src="images/music2.jpg" onmouseover="this.src='images/music2_2.jpg'" onmouseout="this.src='images/music2.jpg'" />
+			</a></li>
+         </ul>  
+    </div>
+    <!--/list-->
+    <div class="scrollBar">
+        <div class="barL"></div>
+        <div class="barM">
+            <div class="bar">
+                <div class="l"></div>
+                <div class="r"></div>
+            </div>
+        </div>
+        <div class="barR"></div>
+    </div>
+    <!--/scrollBar-->
+ </div>
+<!--/box-->
+</body>
+</html>

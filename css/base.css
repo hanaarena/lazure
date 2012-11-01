@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*************Basic*************/
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	/*background:url(images/Phones.png) no-repeat 95% 65% #000;*/
+}
+
+.clear{
+	clear:both;
+}
+
+
+/*************Framework*************/
+/*#logo{
+	position:absolute;
+	top:30px;
+	right:30px;
+	font:72px "Segoe UI Light","Segoe WPC","Segoe UI",Helvetica, Arial, "Arial Unicode MS", Sans-Serif;
+	color:#FFF;
+	text-shadow: 0 0 150px #FFF, 0 0 60px #FFF, 0 0 10px #FFF;
+}
+
+  'windows phone 7' logo  */
+  
+.container{
+	background:#000;
+	width:760px;
+	height:600px;
+	border:2px solid #fff;    /* container边框 */
+	border-radius:10px;      /* 圆角 */
+	display:block;
+	margin:auto;   /* 使整个容器container居中 */
+	margin-top:25px;
+}
+
+
+.header{
+	display:block;
+	width:370px;
+	height:70px;
+}
+
+#time{
+	margin:10px;
+	float:left;
+	color:#FFF;
+	text-align:right;
+	font: bold 18px "Segoe UI Light","Segoe WPC","Segoe UI",Helvetica, Arial, "Arial Unicode MS", Sans-Serif;
+}
+
+.conentGroup{
+	position:absolute;      /* 让iframe框架与card不重叠 */
+	margin:35px 225px;      /* 竖直  水平 */
+	width:370px;
+	height:10px;           /* 不知为何，高度变小后iframe中的滚动条可用了 */
+	/* overflow:hidden; 防止.content2 溢出 370x530 */
+}
+
+.content{
+	width:370px;
+	height:380px;
+}
+
+.content2{
+	position:absolute;
+	margin-left:200px;
+	top:200px;
+	background:transparent; /* 紫色模块隐藏 */
+	width:370px;
+	height:380px;
+	-webkit-transition:0.3s ease-in-out;
+	-moz-transition:0.3s ease-in-out;
+	-o-transition:0.3s ease-in-out;
+}  /* 点击 card 之后的动作 控制紫色模块位置等 */
+
+
+.content2 span{
+	height:90px;
+	width:300px;
+	float:left;
+	font:70px "Segoe UI Light","Segoe WPC","Segoe UI",Helvetica, Arial, "Arial Unicode MS", Sans-Serif;
+	line-height:90px;
+	color:rgba(255,255,255,0.9);
+}   /* 点击 card 之后的动作 显示title */
+
+
+.skew{
+	-webkit-transform-origin:0 0;
+	-o-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	transform-origin:0 0;
+	-webkit-transform:scale(0) translate(-135px,0px) rotateY(30deg);      /* 以下4行设置点击iframe框架后的行为 */
+	-o-transform:scale(0) translate(-135px,0px) rotate(30deg);
+	-moz-transform:scale(0) translate(-135px,0px) rotate(30deg);
+	-ms-transform:scale(0) translate(-135px,0px) rotate(30deg);
+}    /* 点击 card 之后的动作 即 .content2 的动作 */
+
+/*************Cards*************/
+.card{
+	float:left;
+	display:block;
+	width:125px;
+	height:125px;
+	margin:0 0 6px 6px;  /* 上 右 下 左 */
+	-webkit-transition:0.09s ease-in-out;
+	-moz-transition:0.09s ease-in-out;
+	-o-transition:0.09s ease-in-out;
+	cursor:pointer;
+	position:relative;
+}
+
+.card.cover{
+	-webkit-transform-origin:0 0;
+	-o-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	transform-origin:0 0;
+	-webkit-transform:scale(1.3) translate(-35px,-30px) rotateY(90deg) skew(0deg,-30deg);
+	-o-transform:scale(1.1) translate(-35px,-30px)  skew(0deg,-30deg);
+	-moz-transform:scale(1.1) translate(-35px,-30px)  skew(0deg,-30deg);
+	-ms-transform:scale(1.1) translate(-35px,-30px) skew(0deg,-30deg);
+}         /* 点击后块行为 */
+ 
+/*       返回按钮       */
+.back{
+	position:absolute;
+	display:block;
+	width:30px;
+	height:30px;
+	border:3px solid #EFEFEF;
+	border-radius:60px;
+	margin:-65px -215px;
+}
+
+
+.back img{
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	padding:6px;
+}
+/*      sina weibo     */
+.weibo {
+	position:absolute;
+	display:block;
+	width:30px;
+	height:30px;
+	border:3px solid #Fff;
+	border-radius:60px;
+	margin:-25px -215px;
+}
+	
+.weibo img{
+	width:25px;
+	height:25px;
+	cursor:pointer;
+	padding:3px;
+}
+/********* iframe **************/
+#iframe_1 {
+	position:absolute;
+	margin-left:100px;
+	margin-top:100px;
+	background:transparent;      /* iframe_1 被点击前设为透明的 */
+/*	-webkit-transition:0.3s ease-in-out;
+	-moz-transition:0.3s ease-in-out;
+	-o-transition:0.3s ease-in-out;  
+	点击返回后iframe行为 */
+} 

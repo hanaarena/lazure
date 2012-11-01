@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+.ishare-title {
+	background:url(images/ishareTitle.png);
+	float:left;
+	width:158px;
+	height:50px;
+}
+.ishare-bg {
+	position:relative;
+	top:51px;
+	width:420px;
+	height:208px;
+	background:url(images/wenan-bg.png);
+	border-radius:6px;
+}
+.ishare-wenan {
+	font-family:"Microsoft YaHei",微软雅黑;
+	font-size:17px;
+	color:#4c4c4c;
+	float:left;
+	position:relative;
+	top:-35px;
+	left:15px;
+}
+#weibofb {
+	position:relative;
+	top:165px;
+	left:-147px;
+}
+</style>
+</head>
+
+<body>
+<div class="ishare-title"></div>
+<div class="ishare-bg">
+	<div class="ishare-wenan">是否有些心情或者场景经常从你的身边闪烁而过？<br />
+    赶紧和和我们一起分享吧！<br />
+    在「晴朗」,分享你所热爱的美好事物！<br />
+    期待你的分享.<br />
+    : )
+    </div>
+    <div id="weibofb">
+    	<script type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2358507359"></script>
+		<script type="text/javascript">
+			function pub(){
+			WB2.anyWhere(function(W){
+			W.widget.publish();
+			});
+			}
+		</script> 
+		<wb:publish default_text="#每天好心情#" button_type="gray" button_size="big" button_text="发布到微博" >微博发布器</wb:publish>
+    </div>
+</div>
+</body>
+</html>

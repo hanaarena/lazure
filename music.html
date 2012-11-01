@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Accordion Menu Using jQuery</title>
+<script type="text/javascript" language="javascript" src="js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript">
+<!--//---------------------------------+
+//  Developed by Roshan Bhattarai 
+//  Visit http://roshanbh.com.np for this script and more.
+//  This notice MUST stay intact for legal use
+// --------------------------------->
+$(document).ready(function()
+{
+	//slides the element with class "menu_body" when paragraph with class "menu_head" is clicked 
+	$("#firstpane p.menu_head").click(function()
+    {
+		$(this).css({backgroundImage:"url(images/music-head.png)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+       	$(this).siblings().css({backgroundColor:"#f3f1f1"});   //Color:""可改为Image:url() siblings为点击后样式 
+	});
+	//slides the element with class "menu_body" when mouse is over the paragraph
+	$("#secondpane p.menu_head").mouseover(function()
+    {
+	     $(this).css({backgroundImage:"url(images/music-head.png)"}).next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+         $(this).siblings().css({backgroundColor:"#f3f1f1"});  //Color:""可改为Image:url() siblings为点击后样式
+	});
+});
+</script>
+<link rel="stylesheet" type="text/css" href="css/music.css" />
+</head>
+<body>
+<div style="float:left;left:7px; position:relative;" > 
+
+  <p class="title"><strong> 歌曲分享 </strong></p>
+  <div id="firstpane" class="menu_list"> 
+
+    <p class="menu_head"><img src="images/music1.png"/><span class="biaoti">刘浩龙 – 小精选</span><img class="down" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_58869.html" target="_blank"><img src="images/music1_2.jpg" onmouseover="this.src='images/music1_2.jpg'" onmouseout="this.src='images/music1.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    近年转战电影圈的刘浩龙，2012年回归他的歌唱事业<br />
+    5月刚在香港艺术中心寿臣剧院举行两场《刘浩龙小音乐会》<br />
+    还发行新曲+精选《小精选》。<br />
+    碟内共收录12首精选歌和四首新歌<br />
+    见证了“师兄”八年来的音乐成长路。<br />
+    </span>
+    </div>
+    
+    <p class="menu_head"><img src="images/music2.png"/><span class="biaoti">林宥嘉 – 大小说家</span><img class="down" style="left:38px;" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_58868.html" target="_blank"><img src="images/music2.jpg" onmouseover="this.src='images/music2_2.jpg'" onmouseout="this.src='images/music2.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    这张最新专辑以一部十个章节（歌曲）组成的“音乐小说”为概念<br />
+    林宥嘉更亲力参与幕后制作的每个环节。<br />
+    由陈珊妮担任制作人的首波主打“思凡”<br />
+    融合了摇滚与电子、七十年代disco与八十年代新浪潮，<br /> 
+    </span>
+    </div>
+    
+    <p class="menu_head"><img src="images/music3.png"/><span class="biaoti">合辑 – 林夕字传</span><img style="margin-left:3px;"class="down" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_7072.html" target="_blank"><img src="images/music3.jpg" onmouseover="this.src='images/music3_2.jpg'" onmouseout="this.src='images/music3.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    <br />
+    由林夕亲自挑选至爱词作<br />
+    并由林若宁点评 分享背后的故事<br />
+    3CD限量精美豪华包装 DSD重新编制<br />
+    </span>
+    </div>
+    
+    <p class="menu_head"><img src="images/music4.png"/><span class="biaoti">黄英 – 灿烂的行走</span><img class="down" style="left:38px;" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_58633.html" target="_blank"><img src="images/music4.jpg" onmouseover="this.src='images/music4_2.jpg'" onmouseout="this.src='images/music4.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    凭借与生俱来的高亢嗓音和清澈音色 独有的“英式唱腔”<br />
+    回归大自然的黄英兴奋地仿佛一个孩子<br />
+    和煦的阳光下 一袭纯白色衬衫的黄英回眸莞尔一笑<br />
+    弱的外表下掩藏着摄人心魄的光芒<br />
+    &nbsp;一望无垠的金色田野犹如黄英独树一帜的音乐风格 自然大气
+    </span>
+    </div>
+    
+    <p class="menu_head"><img src="images/music5.png"/><span class="biaoti">第一次 电影原声带</span><img style="margin-left:-20px;" class="down" style="left:38px;" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_58568.html" target="_blank"><img src="images/music5.jpg" onmouseover="this.src='images/music5_2.jpg'" onmouseout="this.src='images/music5.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    <br />
+    我们的初恋共鸣<br />
+    Angelababy/赵又廷/江珊/袁咏琳 领衔主演<br />
+    “第一次”电影原声带<br />
+    </span>
+    </div>
+    
+    <p class="menu_head"><img src="images/music6.png"/><span class="biaoti">辛晓琪 – 遇见快乐</span><img class="down" style="left:38px;" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_58591.html" target="_blank"><img src="images/music6.jpg" onmouseover="this.src='images/music6_2.jpg'" onmouseout="this.src='images/music6.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    黄大炜 x 候志坚 x 辛晓琪 x 马玉芬 四大製作人联手打造<br />
+    岁月的淬练 转变为「喜乐女人」<br />
+    顺流、逆流、迎风、背风、平坦宽敞、窒碍难行…的道路<br />
+    在2012的转角，遇见快乐<br />
+    </span>
+    </div>
+    
+    <p class="menu_head"><img src="images/music7.png"/><span class="biaoti" style="margin-left:-10px;">林忆莲 MMXI演唱会</span><img style="margin-left:-28px;" class="down" style="left:38px;" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_58550.html" target="_blank"><img src="images/music7.jpg" onmouseover="this.src='images/music7_2.jpg'" onmouseout="this.src='images/music7.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    乐坛天后林忆莲继 Live 07 后再次为乐迷带来耳目一新的表演<br />
+    林忆莲MMXI演唱会》于2011年9月23至25日在香港红馆举行<br />
+    把她1985年出道至今的歌曲重新编排 加入新的演唱元素及形式<br />
+    让在场观众有不一样的体会及感动<br />
+    </span>
+    </div>
+    
+    <p class="menu_head"><img src="images/music8.png"/><span class="biaoti" style="margin-left:-10px;">范玮琪 – 爱,在一起</span><img style="margin-left:-14px;" class="down" style="left:38px;" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_58425.html" target="_blank"><img src="images/music8.jpg" onmouseover="this.src='images/music8_2.jpg'" onmouseout="this.src='images/music8.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    最幸福的是 相爱也能 包容彼此不完美<br />
+    我爱你 你更爱我<br />
+    所以我们明白了<br />
+    所以我们笃定了<br />
+    &nbsp;爱,在一起<br />
+    &nbsp;与 最亲爱的你
+    </span>
+    </div>
+    
+    <p class="menu_head"><img src="images/music9.png"/><span class="biaoti" style="margin-left:-10px;">萧敬腾 – Mr.JAZZ</span><img style="margin-left:-14px;" class="down" style="left:38px;" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_58026.html" target="_blank"><img src="images/music9.jpg" onmouseover="this.src='images/music9_2.jpg'" onmouseout="this.src='images/music9.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    Mr. JAZZ vs. Mr. Rock<br />
+    25岁，萧敬腾的精神年。所以他用直觉做分享<br />
+    不论是演唱会上Mr. Rock的狂放摇滚<br />
+    还是爵士之夜Mr. Jazz的静谧温润<br />
+    &nbsp;都是萧敬腾直觉式分享的一部份<br />
+    </span>
+    </div>
+    
+    <p class="menu_head"><img src="images/music10.png"/><span class="biaoti" style="margin-left:30px">JS – 听见</span><img class="down" style="margin-left:26px;" src="images/down.png" /></p>
+    <div class="menu_body"><a href="http://www.1ting.com/album_57940.html" target="_blank"><img src="images/music10.jpg" onmouseover="this.src='images/music10_2.jpg'" onmouseout="this.src='images/music10.jpg'" title="全碟试听" /></a>
+    <span class="zhengwen">
+    <hr size="1" style=""/>
+    时间倒数计时前进走着<br />
+    停下脚步重新定位<br />
+    不要以为流行音乐只有一种可能<br />
+    听腻了千篇一律的制式旋律<br />
+    &nbsp;安静 会是一种沉淀<br />
+    &nbsp;让人听见另一种声音
+    </span>
+    </div>
+  <!--Code for menu ends here--> 
+</div>
+</body>
+</html>
